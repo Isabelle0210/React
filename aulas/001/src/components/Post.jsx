@@ -17,9 +17,10 @@ export function Post(){
             <div className={styles.content}>
                 <p>Fala galeraa 👋</p>
                 <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p>
-                <p> <a>👉 isa.DoctorCare</a></p>
+                <p><a>👉 isa.DoctorCare</a></p>
                 <p><a>#novoprojeto #nlw #rocketseat</a></p>
             </div>
+            <div className={styles.line}></div>
         </article>
     );
 }
