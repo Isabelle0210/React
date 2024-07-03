@@ -20,7 +20,14 @@ export function Post(){
                 <p><a>👉 isa.DoctorCare</a></p>
                 <p><a>#novoprojeto #nlw #rocketseat</a></p>
             </div>
-            <div className={styles.line}></div>
+
+            <form className={styles.commentForm}>
+                <strong>Deixe seu feedback</strong>
+                <textarea 
+                placeholder='Deixe seu comentário...'
+                />
+                <button type='submit'>Comentar</button>
+            </form>
         </article>
     );
 }
