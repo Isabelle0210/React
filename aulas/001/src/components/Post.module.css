@@ -34,7 +34,6 @@
     line-height: 1.6;
     color: var(--gray-300);
     padding: 2rem;
-    margin-top: 1.5rem;
 }
 .content p{
     margin-top: 1rem;
@@ -48,7 +47,8 @@
     width: 80%;
     margin-top: 1.5rem;
     padding-top: 1.5rem;
-    border-top: 1px solid var(--gray-600);  ;
+    border-top: 1px solid var(--gray-600); 
+    margin-left: 2rem;
 }
 .commentForm > strong{
     color: var(--gray-100);
@@ -70,6 +70,7 @@
 .commentForm button[type="submit"]{	
     padding: 1rem 1.5rem;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     border: 0;
     border-radius: 8px;
     background: var(--green-500);
@@ -77,4 +78,10 @@
     font-weight: bold;
     cursor: pointer;
 
+    visibility: hidden;
+    max-height: 0;
+    display: none;
+}
+.commentForm button[type="submit"]:hover{
+    background: var(--green-300);
 }
