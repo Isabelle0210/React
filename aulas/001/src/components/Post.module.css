@@ -78,9 +78,6 @@
     font-weight: bold;
     cursor: pointer;
 
-    visibility: hidden;
-    max-height: 0;
-    display: none;
 }
 .commentForm button[type="submit"]:hover{
     background: var(--green-300);
