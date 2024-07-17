@@ -3,21 +3,24 @@ import styles from './Post.module.css';
 
 
 
-export function Post(props){
-    console.log(props)
+// eslint-disable-next-line react/prop-types
+export function Post({author, publishedAt, content}) {
     return( 
+        
         <>
             <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <Avatar src={props.author.avatarUrl} alt={props.author.name} />
+                    <img className={styles.avatar} src='https://github.com/Isabelle0210.png'/>
                     <div className={styles.authorInfo}>
-                        <strong>Isabelle Caroline</strong>
-                        <span>Web Developer</span>
+                        <strong>{author.name}</strong>
+                        <span>{author.rule}</span>
                     </div>
                 </div>
 
-                <time title='11 de Maio ás 8:13h ' dateTime='2024-05-11 08:13:30'>Publicado há 1h</time>
+                <time dateTime='2024-05-11 08:13:30'>
+                    {publisheDateFormatted}
+                </time>
             </header>
             <div className={styles.content}>
                 <p>Fala galeraa 👋</p>
