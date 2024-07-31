@@ -4,7 +4,12 @@ import './App.css'
 
 function App() {
 
-  const [usuario, setUsuario] = useState("")
+
+  //useCallback é um hook que serve para memorizar uma função, ele é executado toda vez que o componente é renderizado
+
+  //useMemo é um hook que serve para memorizar um valor, ele é executado toda vez que o componente é renderizado
+  //useEffect é um hook que serve para executar efeitos colaterais em componentes funcionais, ele é executado toda vez que o componente é renderizado
+  const [usuario, setUsuario] = useState("") //o useState é um hook que cria um estado, o primeiro parametro é o valor inicial do estado e o segundo é uma função que atualiza o estado e retorna um array com o valor atual do estado
   const [count, setCount] = useState(0)
   const [usuarios, setUsuarios] = useState(["joao", "maria", "jose"])
   //aqui eu crio um estado para o usuario e outro para a array de usuarios
