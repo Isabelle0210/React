@@ -30,14 +30,17 @@ function App() {
         alert('Repositório já adicionado!') // Alerta caso o repositório já tenha sido adicionado
       }
   }
-
+  const handleRemoveRepo = (id: number) => {
+    const newRepos = repos.filter(repo => repo.id !== id); // Filtrando os repositórios para remover o repositório com o id passado
+    setRepos(newRepos); // Atualizando o estado de repos
+  }
   return (
     <>
       <Container>
         <img src={gitLogo} width={72} height={72} alt="Logo" />
         <Input value={currentRepo} onChange={(e) => setCurrentRepo(e.target.value)} />
         <Button onClick={handleSearchRepo} /> {/* Adicionei onClick para chamar handleSearchRepo */}
-        {repos.map(repo => <ItemRepo key={repo.id} repo={repo} />)} {/* Mapeando e renderizando cada ItemRepo com a prop repo */}
+        {repos.map(repo => <ItemRepo key={repo.id} repo={repo} handleRemoveRepo={handleRemoveRepo}/>)} {/* Mapeando e renderizando cada ItemRepo com a prop repo */}
       </Container>
     </>
   );
