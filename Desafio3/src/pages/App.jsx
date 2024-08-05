@@ -1,9 +1,14 @@
+import { Aside } from "../components/aside"
+import { Header } from "../components/Header"
 
 function App() {
 
   return (
     <>
-      alooo
+      <Header/>
+      <main>
+        <Aside/>
+      </main>
     </>
   )
 }
